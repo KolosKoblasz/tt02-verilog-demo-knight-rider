@@ -8,14 +8,15 @@ jobs:
     steps:
     # need the repo checked out
     - name: checkout repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     # install oss fpga tools
     - name: install oss-cad-suite
-      uses: YosysHQ/setup-oss-cad-suite@v1
+      uses: YosysHQ/setup-oss-cad-suite@v2
       with:
+          version: '2023-02-23'
           python-override: true
-    - run: | 
+    - run: |
         yosys --version
         iverilog -V
         cocotb-config --libpython
