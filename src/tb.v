@@ -6,7 +6,7 @@ this testbench just instantiates the module and makes some convenient wires
 that can be driven / tested by the cocotb test.py
 */
 
-module tb (
+module  tb (
     // testbench is controlled by test.py
     input        clk,
     input        rst,
@@ -29,10 +29,10 @@ module tb (
     assign leds = outputs;
 
     // instantiate the DUT
-    knight_rider # (
+    knight_rider_KolosKoblasz # (
         .OUT_WIDTH(8)
     )
-    knight_rider_inst_0
+    knight_rider_KolosKoblasz_inst_0
     (
         .io_in  (inputs),
         .io_out (outputs)

@@ -1,6 +1,6 @@
 `default_nettype none
 
-module knight_rider # (
+module knight_rider_KolosKoblasz # (
     parameter OUT_WIDTH = 8
 ) (
     input [7:0]               io_in,
