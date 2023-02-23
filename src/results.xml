@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1677166093" />
-    <testcase name="test_knight_rider" classname="test" file="/config/Desktop/tt02-verilog-demo-knight-rider/src/test.py" lineno="8" time="60.147733211517334" sim_time_ns="70156032000.001" ratio_time="1166395277.9947364" />
-  </testsuite>
-</testsuites>
