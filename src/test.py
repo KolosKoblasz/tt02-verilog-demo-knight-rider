@@ -25,7 +25,6 @@ async def test_knight_rider(dut):
         dut._log.info("Change rate no.: {}".format(i))
         dut.rate_ctrl.value = 1
         await ClockCycles(dut.clk, randrange(1,10))
-        #await Timer(randrange(167,167*9), units="us")
         dut.rate_ctrl.value = 0
         await ClockCycles(dut.clk, 3)
 
