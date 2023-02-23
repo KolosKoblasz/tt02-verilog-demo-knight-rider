@@ -1,11 +1,11 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Thu Feb 23 11:35:16 2023
+[*] Thu Feb 23 11:35:34 2023
 [*]
 [dumpfile] "/config/Desktop/tt02-verilog-demo/src/tb.vcd"
 [dumpfile_mtime] "Thu Feb 23 11:33:59 2023"
 [dumpfile_size] 6689479
-[savefile] "/config/Desktop/tt02-verilog-demo/src/tb.gtkw"
+[savefile] "/config/Desktop/tt02-verilog-demo/src/tb.sav"
 [timestart] 29914500000
 [size] 2286 698
 [pos] -1 -1
