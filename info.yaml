@@ -18,8 +18,8 @@ documentation:
   title:        "Knight Rider LED Controller"      # Project title
   description:  "The logic assertes output bits one by one, like KITT's sensor lights in Knight Rider."      # Short description of what your project does
   how_it_works: "Uses several counters, shiftregisters to create a moving light. Input[2] and Input[3] can control speed and brightness respectively."      # Longer description of how the project works
-  how_to_test:  "After reset it starts moving the switched on LED. By creating rising edges on Input[2] and Input[3] the two config space can be discovered. Input[0] is clk Input[1] is reset (1=reset on, 0=Reset off). Simulated with 6KHz clock signal."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "Conect LEDs with ~1K-10K Ohm serial resistors to output pins and connect push button switches to Input[2] and Input[3] which are drive the inputs with logic zeros when idle and with logic 1 when pressed."      # Describe any external hardware needed
+  how_to_test:  "After reset it starts moving the switched on LED. By creating rising edges on Input[2] and Input[3] the two config spaces can be discovered. Input[0] is clk Input[1] is reset (1=reset on, 0=Reset off). Simulated with 6KHz clock signal."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "Conect LEDs with ~1K-10K Ohm serial resistors to output pins and connect push button switches to Input[2] and Input[3] which drive the inputs with logic zeros when idle and with logic 1 when pressed."      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     6000       # Clock frequency in Hz (if required)
@@ -27,8 +27,8 @@ documentation:
   inputs:               # a description of what the inputs do
     - clock
     - reset
-    - rate_ctrl
-    - brightness_ctrl
+    - speed control
+    - brightness control
     - none
     - none
     - none

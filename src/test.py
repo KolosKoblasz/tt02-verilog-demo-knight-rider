@@ -19,15 +19,21 @@ async def test_knight_rider(dut):
     dut.rst.value = 0
     dut._log.info("reset deasserted")
 
-    for i in range(10):
-        await ClockCycles(dut.clk, 7000*6)
-        #change_rate(dut, i)
-        dut._log.info("Change rate no.: {}".format(i))
-        dut.rate_ctrl.value = 1
-        await ClockCycles(dut.clk, randrange(1,10))
-        dut.rate_ctrl.value = 0
-        await ClockCycles(dut.clk, 3)
+    for brightness in range(5):
+        for speed in range(10):
+            await ClockCycles(dut.clk, 7000*6)
+            #change_rate(dut, i)
+            dut._log.info("Change rate no.: {}".format(speed))
+            dut.rate_ctrl.value = 1
+            await ClockCycles(dut.clk, randrange(1,10))
+            dut.rate_ctrl.value = 0
+            await ClockCycles(dut.clk, 3)
 
+        dut._log.info("Change brightness no.: {}".format(brightness))
+        dut.brightness_ctrl.value = 1
+        await ClockCycles(dut.clk, randrange(1,10))
+        dut.brightness_ctrl.value = 0
+        await ClockCycles(dut.clk, 3)
 
 #        assert int(dut.segments.value) == segments[i]
 

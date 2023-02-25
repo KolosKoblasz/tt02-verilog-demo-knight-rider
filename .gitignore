@@ -3,3 +3,5 @@
 .vscode
 *.vcd
 src/sim_build/**
+src/src/__pycache__/**
+src/src/*.gtkw
