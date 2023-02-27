@@ -4,6 +4,9 @@ project:
   wokwi_id:    0        # If using wokwi, set this to your project's ID
   source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
     - knight_rider_KolosKoblasz.v
+    - light_shift.v
+    - brightness_ctrl.v
+    - rate_ctrl.v
   top_module:  "knight_rider_KolosKoblasz"      # put the name of your top module here, make it unique by prepending your github username
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -15,11 +18,11 @@ project:
 documentation:
   author:       "Kolos Koblasz"      # Your name
   discord:      "kolos_koblasz#3383"      # Your discord handle
-  title:        "Knight Rider LED Controller"      # Project title
+  title:        "Knight Rider Sensor Lights - LED Controller"      # Project title
   description:  "The logic assertes output bits one by one, like KITT's sensor lights in Knight Rider."      # Short description of what your project does
   how_it_works: "Uses several counters, shiftregisters to create a moving light. Input[2] and Input[3] can control speed and brightness respectively."      # Longer description of how the project works
   how_to_test:  "After reset it starts moving the switched on LED. By creating rising edges on Input[2] and Input[3] the two config spaces can be discovered. Input[0] is clk Input[1] is reset (1=reset on, 0=Reset off). Simulated with 6KHz clock signal."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "Conect LEDs with ~1K-10K Ohm serial resistors to output pins and connect push button switches to Input[2] and Input[3] which drive the inputs with logic zeros when idle and with logic 1 when pressed."      # Describe any external hardware needed
+  external_hw:  "Conect LEDs with ~1K-10K Ohm serial resistors to output pins and connect push button switches to Input[2] and Input[3] which drive the inputs with logic zeros when idle and with logic 1 when pressed. Rising edge on these inputs selects the next settings."      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     6000       # Clock frequency in Hz (if required)
